@@ -1,0 +1,2138 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rendszám</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,600;0,800;1,600;1,800&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="192x192" href="../img/favico/android-chrome-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/favico/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favico/favicon-16x16.png">
+    <link rel="stylesheet" href="../css/grid.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="js/angular.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.js"></script>
+    <script src="js/app.js" type="text/javascript"></script>
+    <script src="js/maincontroller.js" type="text/javascript"></script>
+    <script src="js/jquery-1.10.2.js" type="text/javascript"></script>
+    <style>
+        #input-text{
+            height: 30px;
+            margin-bottom: 15px;
+        }
+        table,
+        th,
+        td {
+            border: 1px solid grey;
+            border-collapse: collapse;
+            padding: 5px;
+        }
+
+        table tr:nth-child(odd) {
+            background-color: #f1f1f1;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+
+<body id="rendszam">
+    <div class="top">
+        <div class="container">
+            <ul class="header">
+                <li> <a href="mailto:mail@gmail.com"><a href="mailto:mail@gmail.com"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="27" height="15" viewBox="0 0 27 15">
+                                <defs>
+                                    <style>
+                                        .cls-1 {
+                                            fill: #fff;
+                                            fill-rule: evenodd;
+                                        }
+                                    </style>
+                                </defs>
+                                <path class="cls-1"
+                                    d="M1020.75,13.532l8.25-5.47V21.907ZM1002.11,7h26.82l-13.41,8.9ZM1002,21.944l0.03-13.89,8.25,5.479ZM1015.51,17v0l0.01,0v0l4.57-3.033,7.9,8.029h-24.95l7.9-8.029Z"
+                                    transform="translate(-1002 -7)" />
+                            </svg>Mail</a>
+                </li>
+                <li> <a href="tel:+36301234567"><svg id="Réteg_1" data-name="Réteg 1" xmlns="http://www.w3.org/2000/svg"
+                            width="11.01" height="20" viewBox="0 0 11.01 20">
+                            <defs>
+                                <style>
+                                    .cls-1 {
+                                        fill: #fff;
+                                    }
+                                </style>
+                            </defs>
+                            <title>phone</title>
+                            <path class="cls-1"
+                                d="M3.23.95a1.74,1.74,0,0,0-1.06.84C2,2.19,2,1.41,2,10.89,2,17,2,19.51,2,19.62a1.69,1.69,0,0,0,1.11,1.22l.21.07h8.3l.2-.07a2,2,0,0,0,.75-.48,2,2,0,0,0,.36-.69c0-.17.05-.66.05-8.78V2.28L12.93,2A1.68,1.68,0,0,0,11.74.94C11.48.88,3.48.88,3.23.95Zm5.42.64s0,.07,0,.12-.18,0-1.13,0l-1.13,0a.12.12,0,0,1,0-.16s.52,0,1.14,0A6.57,6.57,0,0,1,8.65,1.59Zm3,.86.07.07v7.85c0,6.12,0,7.85,0,7.89a.33.33,0,0,1-.1.08s-1.09,0-4.13,0H3.4l-.08-.08-.08-.08V10.38c0-5.88,0-7.83,0-7.87a.33.33,0,0,1,.08-.1s1,0,4.15,0h4.1ZM7.75,19.1a.59.59,0,0,1,.19.18.55.55,0,0,1,0,.58.54.54,0,0,1-.91,0,.59.59,0,0,1,0-.51A.55.55,0,0,1,7.75,19.1Z"
+                                transform="translate(-1.99 -0.9)" />
+                        </svg>Mobil</a> </li>
+            </ul>
+        </div>
+    </div>
+    <nav class="navbar">
+        <container>
+            <a class="navbar-brand" href="../index.html" aria-label="navbar">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="30" height="30">
+                    <path
+                        d="M62.707,31.293l-30-30a1,1,0,0,0-1.414,0l-30,30A1,1,0,0,0,2,33H7V57H6a1,1,0,0,0-1,1v4a1,1,0,0,0,1,1H58a1,1,0,0,0,1-1V58a1,1,0,0,0-1-1H57V33h5a1,1,0,0,0,.707-1.707ZM57,61H7V59H57ZM27,57H15V39H27Zm2,0V38a1,1,0,0,0-1-1H14a1,1,0,0,0-1,1V57H9V32.414l23-23,23,23V57ZM56.414,31,32.707,7.293a1,1,0,0,0-1.414,0L7.586,31H4.414L32,3.414,59.586,31Z" />
+                    <path
+                        d="M39,26a7,7,0,1,0-7,7A7.008,7.008,0,0,0,39,26ZM27,26a5,5,0,1,1,5,5A5.006,5.006,0,0,1,27,26Z" />
+                    <path
+                        d="M52,37H32a1,1,0,0,0-1,1V52a1,1,0,0,0,1,1H52a1,1,0,0,0,1-1V38A1,1,0,0,0,52,37Zm-1,7H43V39h8ZM41,39v5H33V39Zm-8,7h8v5H33Zm10,5V46h8v5Z" />
+                    <rect x="17" y="45" width="4" height="4" />
+                </svg>
+            </a>
+            <ul class="nav-menu navbar-nav menu links">
+                <li><a data-active="home" href="../index.html">Home</a></li>
+                <li><a data-active="front-page" href="../pages/front-page.html">Biblia</a></li>
+                <li><a data-active="videok" href="../pages/videok.html">Videók</a></li>
+                <li><a data-active="rendszam" href="../pages/rendszam.html">Rendszám</a></li>
+                <li><a data-active="jegyzet" href="../pages/jegyzet.html">Jegyzet</a></li>
+                <li><a data-active="felirat" href="../pages/felirat.html">Felirat</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </container>
+    </nav>
+    <main>
+        <!-- <h1>Csoportok</h1> -->
+        <h1>Rendszám</h1>
+        <section class="boxes">
+            <div class="box">
+                <p>Click the table headers to change the sorting order:</p>
+
+                <div ng-app="myApp" ng-controller="namesCtrl">
+
+                    <p><input type="text" ng-model="test" id="input-text"></p>
+
+                    <!-- <ul> -->
+                    <!-- <li ng-repeat="x in names | filter:test"> -->
+                    <!-- {{ x }} -->
+                    <!-- </li> -->
+                    <!-- </ul> -->
+
+                    <table border="1" width="100%">
+                        <tr>
+                            <th>Index</th>
+                            <th ng-click="orderByMe('office')">Office</th>
+                            <th ng-click="orderByMe('name')">Name</th>
+                            <th ng-click="orderByMe('number')">number</th>
+                        </tr>
+                        <tr ng-repeat="x in names | filter:test | orderBy:myOrderBy">
+                            <td>{{ $index + 1 }}</td>
+                            <td>{{x.office}}</td>
+                            <td>{{x.name}}</td>
+                            <td>{{x.number}}</td>
+                        </tr>
+                    </table>
+
+                </div>
+
+                <script>
+                    angular.module('myApp', []).controller('namesCtrl', function ($scope) {
+                        $scope.names = [{
+                                office: 'Ktg-Synergy',
+                                name: 'AEAD-097',
+                                number: '097-AEAD'
+                            },
+                            {
+                                office: 'Ktg-Synergy',
+                                name: 'AEBU-104',
+                                number: '104-AEBU'
+                            },
+                            {
+                                office: 'Ktg-Synergy',
+                                name: 'FZL-119',
+                                number: '119-FLZ'
+                            },
+                            {
+                                office: 'Ktg-Synergy',
+                                name: 'SPM-310',
+                                number: '310-SPM'
+                            },
+                            {
+                                office: 'Ktg-Synergy',
+                                name: 'THN-363',
+                                number: '363-THN'
+                            },
+                            {
+                                office: 'Ktg-Synergy',
+                                name: 'AEMQ-413',
+                                number: '413-AEMQ'
+                            },
+                            {
+                                office: 'Ktg-Synergy',
+                                name: 'AAIJ-441',
+                                number: '441-AAIJ'
+                            },
+                            {
+                                office: 'Ktg-Synergy',
+                                name: 'AAME-547',
+                                number: '547-AAME'
+                            },
+                            {
+                                office: 'Ktg-Synergy',
+                                name: 'AAME-549',
+                                number: '549-AAME'
+                            },
+                            {
+                                office: 'Ktg-Synergy',
+                                name: 'AEID-634',
+                                number: '634-AEID'
+                            },
+                            {
+                                office: 'Ktg-Synergy',
+                                name: 'AAKS-652',
+                                number: '652-AAKS'
+                            },
+                            {
+                                office: 'Ktg-Synergy',
+                                name: 'MUM-719',
+                                number: '719-MUM'
+                            },
+                            {
+                                office: 'Ktg-Synergy',
+                                name: 'AEJN-734',
+                                number: '734-AEJN'
+                            },
+                            {
+                                office: 'Ktg-Synergy',
+                                name: 'AEJN-735',
+                                number: '735-AEJN'
+                            },
+                            {
+                                office: 'Ktg-Synergy',
+                                name: 'AAJX-891',
+                                number: '891-AAJX'
+                            },
+                            {
+                                office: 'Ktg-Synergy',
+                                name: 'AEFC-928',
+                                number: '928-AEFC'
+                            },
+                            {
+                                office: 'Gk-Synergy',
+                                name: 'AAIJ-031',
+                                number: '031-AAIJ'
+                            },
+                            {
+                                office: 'Gk-Synergy',
+                                name: 'AACJ-050',
+                                number: '050-AACJ'
+                            },
+                            {
+                                office: 'Gk-Synergy',
+                                name: 'AAHT-118',
+                                number: '118-AAHT'
+                            },
+                            {
+                                office: 'Gk-Synergy',
+                                name: 'AAHT-148',
+                                number: '148-AAHT'
+                            },
+                            {
+                                office: 'Gk-Synergy',
+                                name: 'SYV-145',
+                                number: '145-SYV'
+                            },
+                            {
+                                office: 'Gk-Synergy',
+                                name: 'AEDU-234',
+                                number: '234-AEDU'
+                            },
+                            {
+                                office: 'Gk-Synergy',
+                                name: 'AADT-235',
+                                number: '235-AADT'
+                            },
+                            {
+                                office: 'Gk-Synergy',
+                                name: 'AAKI-241',
+                                number: '241-AAKI'
+                            },
+                            {
+                                office: 'Gk-Synergy',
+                                name: 'AEBA-299',
+                                number: '299-AEBA'
+                            },
+                            {
+                                office: 'Gk-Synergy',
+                                name: 'HPH-330',
+                                number: '330-HPH'
+                            },
+                            {
+                                office: 'Gk-Synergy',
+                                name: 'AEMQ-413',
+                                number: '413-AEMQ'
+                            },
+                            {
+                                office: 'Gk-Synergy',
+                                name: 'AAIJ-441',
+                                number: '441-AAIJ'
+                            },
+                            {
+                                office: 'Gk-Synergy',
+                                name: 'AAHX-462',
+                                number: '462-AAHX'
+                            },
+                            {
+                                office: 'Gk-Synergy',
+                                name: 'AEEM-467',
+                                number: '467-AEEM'
+                            },
+                            {
+                                office: 'Gk-Synergy',
+                                name: 'SHV-503',
+                                number: '503-SHV'
+                            },
+                            {
+                                office: 'Gk-Synergy',
+                                name: 'AECC-561',
+                                number: '561-AECC'
+                            },
+                            {
+                                office: 'Gk-Synergy',
+                                name: 'AECH-614',
+                                number: '614-AECH'
+                            },
+                            {
+                                office: 'Gk-Synergy',
+                                name: 'AEHK-638',
+                                number: '638-AEHK'
+                            },
+                            {
+                                office: 'Gk-Synergy',
+                                name: 'SZL-670',
+                                number: '670-SZL'
+                            },
+                            {
+                                office: 'Gk-Synergy',
+                                name: 'AEJN-735',
+                                number: '735-AEJN'
+                            },
+                            {
+                                office: 'Gk-Synergy',
+                                name: 'SUF-803',
+                                number: '803-SUF'
+                            },
+                            {
+                                office: 'Gk-Synergy',
+                                name: 'SZK-925',
+                                number: '925-SZK'
+                            },
+                            {
+                                office: 'Gk-Synergy',
+                                name: 'AEHK-935',
+                                number: '935-AEHK'
+                            },
+                            {
+                                office: 'Gk-Synergy',
+                                name: 'AECF-976',
+                                number: '976-AECF'
+                            },
+                            {
+                                office: 'Gk-Synergy',
+                                name: 'AEAC-985',
+                                number: '985-AEAC'
+                            },
+                            {
+                                office: 'Gk-Synergy',
+                                name: 'AEAC-986',
+                                number: '986-AEAC'
+                            },
+                            {
+                                office: 'ABB',
+                                name: 'AEEN-017',
+                                number: '017-AEEN'
+                            },
+                            {
+                                office: 'ABB',
+                                name: 'PTY-068',
+                                number: '068-PTY'
+                            },
+                            {
+                                office: 'ABB',
+                                name: 'SSL-072',
+                                number: '072-SSL'
+                            },
+                            {
+                                office: 'ABB',
+                                name: 'SPL-075',
+                                number: '075-SPL'
+                            },
+                            {
+                                office: 'ABB',
+                                name: 'KSM-079',
+                                number: '079-KSM'
+                            },
+                            {
+                                office: 'ABB',
+                                name: 'RVD-109',
+                                number: '109-RVD'
+                            },
+                            {
+                                office: 'ABB',
+                                name: 'PPH-115',
+                                number: '115-PPH'
+                            },
+                            {
+                                office: 'ABB',
+                                name: 'ICC-215',
+                                number: '215-ICC'
+                            },
+                            {
+                                office: 'ABB',
+                                name: 'MLY-216',
+                                number: '216-MLY'
+                            },
+                            {
+                                office: 'ABB',
+                                name: 'RHG-219',
+                                number: '219-RHG'
+                            },
+                            {
+                                office: 'ABB',
+                                name: 'PHL-372',
+                                number: '372-PHL'
+                            },
+                            {
+                                office: 'ABB',
+                                name: 'RFM-488',
+                                number: '488-RFM'
+                            },
+                            {
+                                office: 'ABB',
+                                name: 'AAJY-503',
+                                number: '503-AAJY'
+                            },
+                            {
+                                office: 'ABB',
+                                name: 'LOE-548',
+                                number: '548-LOE'
+                            },
+                            {
+                                office: 'ABB',
+                                name: 'AAMA-552',
+                                number: '552-AAMA'
+                            },
+                            {
+                                office: 'ABB',
+                                name: 'AAMD-579',
+                                number: '579-AAMD'
+                            },
+                            {
+                                office: 'ABB',
+                                name: 'AAEP-583',
+                                number: '583-AAEP'
+                            },
+                            {
+                                office: 'ABB',
+                                name: 'SMC-667',
+                                number: '667-SMC'
+                            },
+                            {
+                                office: 'ABB',
+                                name: 'AAJW-711',
+                                number: '711-AAJW'
+                            },
+                            {
+                                office: 'ABB',
+                                name: 'RER-722',
+                                number: '722-RER'
+                            },
+                            {
+                                office: 'ABB',
+                                name: 'TOD-750',
+                                number: '750-TOD'
+                            },
+                            {
+                                office: 'ABB',
+                                name: 'AECF-761',
+                                number: '761-AECF'
+                            },
+                            {
+                                office: 'ABB',
+                                name: 'JWN-761',
+                                number: '761-JWN'
+                            },
+                            {
+                                office: 'ABB',
+                                name: 'LPG-786',
+                                number: '786-LPG'
+                            },
+                            {
+                                office: 'ABB',
+                                name: 'SCW-795',
+                                number: '795-SCW'
+                            },
+                            {
+                                office: 'ABB',
+                                name: 'AEBG-910',
+                                number: '910-AEBG'
+                            },
+                            {
+                                office: 'ABB',
+                                name: 'LBR-949',
+                                number: '949-LBR'
+                            },
+                            {
+                                office: 'ABB',
+                                name: 'MKC-963',
+                                number: '963-MKC'
+                            },
+                            {
+                                office: 'CPI',
+                                name: 'JSE-019',
+                                number: '019-JSE'
+                            },
+                            {
+                                office: 'CPI',
+                                name: 'RGY-022',
+                                number: '022-RGY'
+                            },
+                            {
+                                office: 'CPI',
+                                name: 'LYB-038',
+                                number: '038-LYB'
+                            },
+                            {
+                                office: 'CPI',
+                                name: 'NJL-044',
+                                number: '044-NJL'
+                            },
+                            {
+                                office: 'CPI',
+                                name: 'PUH-045',
+                                number: '045-PUH'
+                            },
+                            {
+                                office: 'CPI',
+                                name: 'AECJ-050',
+                                number: '050-AECJ'
+                            },
+                            {
+                                office: 'CPI',
+                                name: 'KDB-084',
+                                number: '084-KDB'
+                            },
+                            {
+                                office: 'CPI',
+                                name: 'SHW-090',
+                                number: '090-SHW'
+                            },
+                            {
+                                office: 'CPI',
+                                name: 'LIY-134',
+                                number: '134-LIY'
+                            },
+                            {
+                                office: 'CPI',
+                                name: 'AABK-170',
+                                number: '170-AABK'
+                            },
+                            {
+                                office: 'CPI',
+                                name: 'NVE-182',
+                                number: '182-NVE'
+                            },
+                            {
+                                office: 'CPI',
+                                name: 'NVR-185',
+                                number: '185-NVR'
+                            },
+                            {
+                                office: 'CPI',
+                                name: 'AICN-206',
+                                number: '206-AICN'
+                            },
+                            {
+                                office: 'CPI',
+                                name: 'PRB-228',
+                                number: '228-PRB'
+                            },
+                            {
+                                office: 'CPI',
+                                name: 'LVE-254',
+                                number: '254-LVE'
+                            },
+                            {
+                                office: 'CPI',
+                                name: 'MNT-296',
+                                number: '296-MNT'
+                            },
+                            {
+                                office: 'CPI',
+                                name: 'IPN-296',
+                                number: '296-IPN'
+                            },
+                            {
+                                office: 'CPI',
+                                name: 'KTD-332',
+                                number: '332-KTD'
+                            },
+                            {
+                                office: 'CPI',
+                                name: 'RTR-382',
+                                number: '382-RTR'
+                            },
+                            {
+                                office: 'CPI',
+                                name: 'NXX-398',
+                                number: '398-NXX'
+                            },
+                            {
+                                office: 'CPI',
+                                name: 'AAGK-455',
+                                number: '455-AAGK'
+                            },
+                            {
+                                office: 'CPI',
+                                name: 'LCV-463',
+                                number: '463-LCV'
+                            },
+                            {
+                                office: 'CPI',
+                                name: 'AADW-516',
+                                number: '516-AADW'
+                            },
+                            {
+                                office: 'CPI',
+                                name: 'NNY-516',
+                                number: '516-NNY'
+                            },
+                            {
+                                office: 'CPI',
+                                name: 'KVT-523',
+                                number: '523-KVT'
+                            },
+                            {
+                                office: 'CPI',
+                                name: 'MJY-533',
+                                number: '533-MJY'
+                            },
+                            {
+                                office: 'CPI',
+                                name: 'RIS-557',
+                                number: '557-RIS'
+                            },
+                            {
+                                office: 'CPI',
+                                name: 'AABX-577',
+                                number: '577-AABX'
+                            },
+                            {
+                                office: 'CPI',
+                                name: 'LZY-602',
+                                number: '602-LZY'
+                            },
+                            {
+                                office: 'CPI',
+                                name: 'NEW-606',
+                                number: '606-NEW'
+                            },
+                            {
+                                office: 'CPI',
+                                name: 'RNP-635',
+                                number: '635-RNP'
+                            },
+                            {
+                                office: 'CPI',
+                                name: 'MTS-647',
+                                number: '547-MTS'
+                            },
+                            {
+                                office: 'CPI',
+                                name: 'PZZ-677',
+                                number: '677-PZZ'
+                            },
+                            {
+                                office: 'CPI',
+                                name: 'NCH-681',
+                                number: '681-NCH'
+                            },
+                            {
+                                office: 'CPI',
+                                name: 'PVH-686',
+                                number: '686-PVH'
+                            },
+                            {
+                                office: 'CPI',
+                                name: 'RVS-686',
+                                number: '686-RVS'
+                            },
+                            {
+                                office: 'CPI',
+                                name: 'ISP-735',
+                                number: '735-ISP'
+                            },
+                            {
+                                office: 'CPI',
+                                name: 'PRM-762',
+                                number: '762-PRM'
+                            },
+                            {
+                                office: 'CPI',
+                                name: 'AACQ-767',
+                                number: '767-AACQ'
+                            },
+                            {
+                                office: 'CPI',
+                                name: 'KBP-740',
+                                number: '740-KBP'
+                            },
+                            {
+                                office: 'CPI',
+                                name: 'SAH-793',
+                                number: '793-SAH'
+                            },
+                            {
+                                office: 'CPI',
+                                name: 'PTS-832',
+                                number: '832-PTS'
+                            },
+                            {
+                                office: 'CPI',
+                                name: 'SWG-858',
+                                number: '858-SWG'
+                            },
+                            {
+                                office: 'CPI',
+                                name: 'RKY-902',
+                                number: '902-RKY'
+                            },
+                            {
+                                office: 'CPI',
+                                name: 'AEFB-922',
+                                number: '922-AEFB'
+                            },
+                            {
+                                office: 'CPI',
+                                name: 'AEFP-930',
+                                number: '930-AEFP'
+                            },
+                            {
+                                office: 'CPI',
+                                name: 'NCT-945',
+                                number: '945-NCT'
+                            },
+                            {
+                                office: 'CPI',
+                                name: 'MHB-959',
+                                number: '959-MHB'
+                            },
+                            {
+                                office: 'CPI',
+                                name: 'LIG-968',
+                                number: '968-LIG'
+                            },
+                            {
+                                office: 'CPI',
+                                name: 'KEW-985',
+                                number: '985-KEW'
+                            },
+                            {
+                                office: 'CPI',
+                                name: 'MCC-992',
+                                number: '992-MCC'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'PLU-018',
+                                number: '018-PLU'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'MRC-026',
+                                number: '026-MRC'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'JZN-042',
+                                number: '042-JZN'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'LUS-047',
+                                number: '047-LUS'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'PGH-061',
+                                number: '061-PGH'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'AAJO-092',
+                                number: '092-AAJO'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'LSR-096',
+                                number: '096-LSR'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'JBZ-104',
+                                number: '104-JBZ'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'RKD-105',
+                                number: '105-RKD'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'RNH-116',
+                                number: '116-RNH'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'NRM-123',
+                                number: '123-NRM'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'PMU-126',
+                                number: '126-PMU'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'HBD-160',
+                                number: '160-HBD'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'NLF-191',
+                                number: '191-NLF'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'KTR-197',
+                                number: '197-KTR'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'HEP-243',
+                                number: '243-HEP'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'HYG-256',
+                                number: '256-HYG'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'KYD-267',
+                                number: '267-KYD'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'LUK-269',
+                                number: '269-LUK'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'PBS-312',
+                                number: '312-PBS'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'AEIA-325',
+                                number: '325-AEIA'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'PDB-327',
+                                number: '327-PDB'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'SBV-333',
+                                number: '333-SBV'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'RIN-347',
+                                number: '347-RIN'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'SWF-364',
+                                number: '364-SWF'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'LGF-368',
+                                number: '368-LGF'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'JMB-372',
+                                number: '372-JMB'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'AAJK-382',
+                                number: '382-AAJK'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'SMS-383',
+                                number: '383-SMS'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'RWH-420',
+                                number: '420-RWH'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'IDB-438',
+                                number: '438-IDB'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'MTX-446',
+                                number: '446-MTX'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'AEBK-464',
+                                number: '464-AEBK'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'RCB-466',
+                                number: '466-RCB'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'SNS-474',
+                                number: '474-SNS'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'RED-475',
+                                number: '475-RED'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'REF-481',
+                                number: '481-REF'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'AABD-496',
+                                number: '496-AABD'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'AAHN-515',
+                                number: '515-AAHN'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'IZP-520',
+                                number: '520-IZP'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'PWZ-521',
+                                number: '521-PWZ'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'RBM-523',
+                                number: '523-RBM'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'GRT-554',
+                                number: '554-GRT'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'AECC-561',
+                                number: '561-AECC'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'AAJW-569',
+                                number: '569-AAJW'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'RLM-573',
+                                number: '573-RLM'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'JXE-579',
+                                number: '579-JXE'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'PTX-583',
+                                number: '583-PTX'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'LZP-589',
+                                number: '589-LZP'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'RAG-594',
+                                number: '594-RAG'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'JND-595',
+                                number: '595-JND'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'MYH-602',
+                                number: '602-MYH'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'IEG-609',
+                                number: '609-IEG'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'INH-628',
+                                number: '628-INH'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'PKE-628',
+                                number: '628-PKE'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'IFF-642',
+                                number: '642-IFF'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'SZD-677',
+                                number: '677-SZD'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'NIJ-699',
+                                number: '699-NIJ'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'SZP-700',
+                                number: '700-SZP'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'PID-715',
+                                number: '715-PID'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'SDW-720',
+                                number: '720-SDW'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'LOL-743',
+                                number: '743-LOL'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'LNG-757',
+                                number: '757-LNG'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'SBM-762',
+                                number: '762-SBM'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'LFR-763',
+                                number: '763-LFR'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'LFX-765',
+                                number: '765-LFX'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'NXW-767',
+                                number: '767-NXW'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'TFZ-813',
+                                number: '813-TFZ'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'AEJV-820',
+                                number: '820-AEJV'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'NTC-836',
+                                number: '836-NTC'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'PVG-849',
+                                number: '849-PVG'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'PEE-866',
+                                number: '866-PEE'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'TCN-838',
+                                number: '838-TCN'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'MWE-883',
+                                number: '883-MWE'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'AEDB-920',
+                                number: '920-AEDB'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'AEEV-950',
+                                number: '950-AEEV'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'KDY-954',
+                                number: '954-KDY'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'HGJ-961',
+                                number: '961-HGJ'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'SHS-966',
+                                number: '966-SHS'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'PDB-970',
+                                number: '970-PDB'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'KIL-978',
+                                number: '978-KIL'
+                            },
+                            {
+                                office: 'Napos',
+                                name: 'NFC-986',
+                                number: '986-NFC'
+                            },
+                            {
+                                office: 'null Synergy',
+                                name: 'AAIJ-032',
+                                number: '032-AAIJ'
+                            },
+                            {
+                                office: 'null RSM',
+                                name: 'AAJY-032',
+                                number: '032-AAJY'
+                            },
+                            {
+                                office: 'null Synergy',
+                                name: 'AIAP-034',
+                                number: '034-AIAP'
+                            },
+                            {
+                                office: 'null Synergy',
+                                name: 'AIAP-036',
+                                number: '036-AIAP'
+                            },
+                            {
+                                office: 'null Synergy',
+                                name: 'AIAP-037',
+                                number: '037-AIAP'
+                            },
+                            {
+                                office: 'null Park-2',
+                                name: 'JWW-037',
+                                number: '037-JWW'
+                            },
+                            {
+                                office: 'null GMV',
+                                name: 'PFT-039',
+                                number: '039-PFT'
+                            },
+                            {
+                                office: 'null Parkfenntarto',
+                                name: 'RAL-041',
+                                number: '041-RAL'
+                            },
+                            {
+                                office: 'null RSM',
+                                name: 'SAS-045',
+                                number: '045-SAS'
+                            },
+                            {
+                                office: 'null Kulon',
+                                name: 'SUE-054',
+                                number: '054-SUE'
+                            },
+                            {
+                                office: 'null BPION',
+                                name: 'RUB-065',
+                                number: '065-RUB'
+                            },
+                            {
+                                office: 'null Synergy',
+                                name: 'AAJK-070',
+                                number: '070-AAJK'
+                            },
+                            {
+                                office: 'null VARIO',
+                                name: 'JVR-073',
+                                number: '073-JVR'
+                            },
+                            {
+                                office: 'null RSM',
+                                name: 'SLR-084',
+                                number: '084-SLR'
+                            },
+                            {
+                                office: 'null RSM',
+                                name: 'SLR-086',
+                                number: '086-SLR'
+                            },
+                            {
+                                office: 'null RSM',
+                                name: 'SLR-087',
+                                number: '087-SLR'
+                            },
+                            {
+                                office: 'null BPION',
+                                name: 'AEHU-087',
+                                number: '087-AEHU'
+                            },
+                            {
+                                office: 'null Synergy',
+                                name: 'AELV-092',
+                                number: '093-AELV'
+                            },
+                            {
+                                office: 'null Synergy',
+                                name: 'RTN-096',
+                                number: '096-RTN'
+                            },
+                            {
+                                office: 'null Vario',
+                                name: 'PBD-098',
+                                number: '098-PBD'
+                            },
+                            {
+                                office: 'null Synergy',
+                                name: 'RYC-108',
+                                number: '108-RYC'
+                            },
+                            {
+                                office: 'null BPION',
+                                name: 'SUM-113',
+                                number: '113-SUM'
+                            },
+                            {
+                                office: 'null Synergy',
+                                name: 'SHH-121',
+                                number: '121-SHH'
+                            },
+                            {
+                                office: 'null Synergy',
+                                name: 'PZV-145',
+                                number: '145-PZV'
+                            },
+                            {
+                                office: 'null Vario',
+                                name: 'NLR-148',
+                                number: '148-NLR'
+                            },
+                            {
+                                office: 'null RSM',
+                                name: 'RFZ-153',
+                                number: '153-RFZ'
+                            },
+                            {
+                                office: 'null RSM',
+                                name: 'RFZ-154',
+                                number: '154-RFZ'
+                            },
+                            {
+                                office: 'null ATA',
+                                name: 'SRR-159',
+                                number: '159-SRR'
+                            },
+                            {
+                                office: 'null Vario',
+                                name: 'AIAF-168',
+                                number: '168-AIAF'
+                            },
+                            {
+                                office: 'null RSM',
+                                name: 'AEEL-175',
+                                number: '175-AEEL'
+                            },
+                            {
+                                office: 'null GMV',
+                                name: 'PMH-176',
+                                number: '176-PMH'
+                            },
+                            {
+                                office: 'null BPION',
+                                name: 'SSZ-180',
+                                number: '180-SSZ'
+                            },
+                            {
+                                office: 'null Parkfenntarto',
+                                name: 'SJH-183',
+                                number: '183-SJH'
+                            },
+                            {
+                                office: 'null Parkfenntarto',
+                                name: 'PMU-185',
+                                number: '185-PMU'
+                            },
+                            {
+                                office: 'null Synergy',
+                                name: 'ROF-187',
+                                number: '187-ROF'
+                            },
+                            {
+                                office: 'null Tulpar',
+                                name: 'SDD-191',
+                                number: '191-SDD'
+                            },
+                            {
+                                office: 'null Parkfenntarto',
+                                name: 'RUU-196',
+                                number: '196-RUU'
+                            },
+                            {
+                                office: 'null Parkfenntarto',
+                                name: 'RUU-197',
+                                number: '197-RUU'
+                            },
+                            {
+                                office: 'null RSM',
+                                name: 'PMN-199',
+                                number: '199-PMN'
+                            },
+                            {
+                                office: 'null Parkfenntarto',
+                                name: 'RPC-206',
+                                number: '206-RPC'
+                            },
+                            {
+                                office: 'null Vario',
+                                name: 'AAHM-209',
+                                number: '209-AAHM'
+                            },
+                            {
+                                office: 'null RSM',
+                                name: 'JRJ-210',
+                                number: '210-JRJ'
+                            },
+                            {
+                                office: 'null Vario',
+                                name: 'NCT-211',
+                                number: '211-NCT'
+                            },
+                            {
+                                office: 'null Vario',
+                                name: 'TAW-212',
+                                number: '212-TAW'
+                            },
+                            {
+                                office: 'null Vario',
+                                name: 'THE-249',
+                                number: '249-THE'
+                            },
+                            {
+                                office: 'null ATA',
+                                name: 'AABZ-260',
+                                number: '260-AABZ'
+                            },
+                            {
+                                office: 'null TULPAR',
+                                name: 'THE-261',
+                                number: '261-THE'
+                            },
+                            {
+                                office: 'null Vario',
+                                name: 'AIAO-271',
+                                number: '271-AIAO'
+                            },
+                            {
+                                office: 'null Parkfenntarto',
+                                name: 'PHV-276',
+                                number: '276-PHV'
+                            },
+                            {
+                                office: 'null FRAME',
+                                name: 'AADY-297',
+                                number: '297-AADY'
+                            },
+                            {
+                                office: 'null BPION',
+                                name: 'LKY-300',
+                                number: '300-LKY'
+                            },
+                            {
+                                office: 'null RSM',
+                                name: 'SOL-301',
+                                number: '301-SOL'
+                            },
+                            {
+                                office: 'null RSM',
+                                name: 'NPU-303',
+                                number: '303-NPU'
+                            },
+                            {
+                                office: 'null BPION',
+                                name: 'LRD-315',
+                                number: '315-LRD'
+                            },
+                            {
+                                office: 'null Vario',
+                                name: 'KDW-329',
+                                number: '329-KDW'
+                            },
+                            {
+                                office: 'null BPION',
+                                name: 'AALX-332',
+                                number: '332-AALX'
+                            },
+                            {
+                                office: 'null Synergy',
+                                name: 'RXE-338',
+                                number: '338-RXE'
+                            },
+                            {
+                                office: 'null Synergy',
+                                name: 'LZR-361',
+                                number: '361-LZR'
+                            },
+                            {
+                                office: 'null Vario',
+                                name: 'TCX-365',
+                                number: '365-TCX'
+                            },
+                            {
+                                office: 'null Parkfenntarto',
+                                name: 'AEJN-367',
+                                number: '367-AEJN'
+                            },
+                            {
+                                office: 'null Vario',
+                                name: 'AAHM-373',
+                                number: '373-AAHM'
+                            },
+                            {
+                                office: 'null RSM',
+                                name: 'TGX-379',
+                                number: '379-TGX'
+                            },
+                            {
+                                office: 'null Vario',
+                                name: 'RRN-388',
+                                number: '388-RRN'
+                            },
+                            {
+                                office: 'null Vario',
+                                name: 'NVD-396',
+                                number: '396-NVD'
+                            },
+                            {
+                                office: 'null Vario',
+                                name: 'AAAW-398',
+                                number: '398-AAAW'
+                            },
+                            {
+                                office: 'null Parkfenntarto',
+                                name: 'PAT-419',
+                                number: '419-PAT'
+                            },
+                            {
+                                office: 'null GMV',
+                                name: 'TDL-424',
+                                number: '424-TDL'
+                            },
+                            {
+                                office: 'null RSM',
+                                name: 'AEIC-427',
+                                number: '427-AEIC'
+                            },
+                            {
+                                office: 'null GMV',
+                                name: 'IMS-436',
+                                number: '436-IMS'
+                            },
+                            {
+                                office: 'null RSM',
+                                name: 'RNV-436',
+                                number: '436-RNV'
+                            },
+                            {
+                                office: 'null BPION',
+                                name: 'SVZ-455',
+                                number: '455-SVZ'
+                            },
+                            {
+                                office: 'null Synergy',
+                                name: 'AAHX-463',
+                                number: '463-AAHX'
+                            },
+                            {
+                                office: 'null RSM',
+                                name: 'PXJ-464',
+                                number: '464-PXJ'
+                            },
+                            {
+                                office: 'null Kulon',
+                                name: 'AABZ-465',
+                                number: '465-AABZ'
+                            },
+                            {
+                                office: 'null RSM',
+                                name: 'RCB-467',
+                                number: '467-RCB'
+                            },
+                            {
+                                office: 'null BPION',
+                                name: 'AEKE-467',
+                                number: '467-AEKE'
+                            },
+                            {
+                                office: 'null ABB',
+                                name: 'SVL-467',
+                                number: '467-SVL'
+                            },
+                            {
+                                office: 'null Synergy',
+                                name: 'RYM-473',
+                                number: '473-RYM'
+                            },
+                            {
+                                office: 'null BPION',
+                                name: 'AEGN-475',
+                                number: '475-AEGN'
+                            },
+                            {
+                                office: 'null Parkfenntarto',
+                                name: 'MHL-500',
+                                number: '500-MHL'
+                            },
+                            {
+                                office: 'null Vario',
+                                name: 'RNH-502',
+                                number: '502-RNH'
+                            },
+                            {
+                                office: 'null RSM',
+                                name: 'AIAM-511',
+                                number: '511-AIAM'
+                            },
+                            {
+                                office: 'null Synergy',
+                                name: 'AIDD-512',
+                                number: '512-AIDD'
+                            },
+                            {
+                                office: 'null RSM',
+                                name: 'AEBM-527',
+                                number: '527-AEBM'
+                            },
+                            {
+                                office: 'null BPION',
+                                name: 'MTX-530',
+                                number: '530-MTX'
+                            },
+                            {
+                                office: 'null RSM',
+                                name: 'AEBM-531',
+                                number: '531-AEBM'
+                            },
+                            {
+                                office: 'null Vario',
+                                name: 'PXH-535',
+                                number: '535-PXH'
+                            },
+                            {
+                                office: 'null Vario',
+                                name: 'TDE-541',
+                                number: '541-TDE'
+                            },
+                            {
+                                office: 'null Vario',
+                                name: 'SNM-577',
+                                number: '577-SNM'
+                            },
+                            {
+                                office: 'null RSM',
+                                name: 'PRF-585',
+                                number: '585-PRF'
+                            },
+                            {
+                                office: 'null Park-2',
+                                name: 'SVA-590',
+                                number: '590-SVA'
+                            },
+                            {
+                                office: 'null Park',
+                                name: 'AEIC-594',
+                                number: '594-AEIC'
+                            },
+                            {
+                                office: 'null Park',
+                                name: 'AEIC-598',
+                                number: '598-AEIC'
+                            },
+                            {
+                                office: 'null GMV',
+                                name: 'AIEU-598',
+                                number: '598-AIEU'
+                            },
+                            {
+                                office: 'null RSM',
+                                name: 'RXJ-601',
+                                number: '601-RXJ'
+                            },
+                            {
+                                office: 'null RSM',
+                                name: 'RDG-602',
+                                number: '602-RDG'
+                            },
+                            {
+                                office: 'null RSM',
+                                name: 'PKV-608',
+                                number: '608-PKV'
+                            },
+                            {
+                                office: 'null Synergy',
+                                name: 'AAKO-610',
+                                number: '610-AAKO'
+                            },
+                            {
+                                office: 'null Synergy',
+                                name: 'AIAO-619',
+                                number: '619-AIAO'
+                            },
+                            {
+                                office: 'null Parkfenntarto',
+                                name: 'RSA-626',
+                                number: '626-RSA'
+                            },
+                            {
+                                office: 'null Parkfenntarto',
+                                name: 'RSA-631',
+                                number: '631-RSA'
+                            },
+                            {
+                                office: 'null GMV',
+                                name: 'STJ-631',
+                                number: '631-STJ'
+                            },
+                            {
+                                office: 'null Park-2',
+                                name: 'RNP-635',
+                                number: '635-RNP'
+                            },
+                            {
+                                office: 'null BPION',
+                                name: 'AALX-641',
+                                number: '641-AALX'
+                            },
+                            {
+                                office: 'null Synergy',
+                                name: 'RTF-647',
+                                number: '647-RTF'
+                            },
+                            {
+                                office: 'null BPION',
+                                name: 'SML-651',
+                                number: '651-SML'
+                            },
+                            {
+                                office: 'null Vario',
+                                name: 'LSN-659',
+                                number: '659-LSN'
+                            },
+                            {
+                                office: 'null Vario',
+                                name: 'AEFL-664',
+                                number: '664-AEFL'
+                            },
+                            {
+                                office: 'null Vario',
+                                name: 'AIEU-664',
+                                number: '664-AIEU'
+                            },
+                            {
+                                office: 'null RSM',
+                                name: 'NFY-666',
+                                number: '666-NFY'
+                            },
+                            {
+                                office: 'null Vario',
+                                name: 'PLM-670',
+                                number: '670-PLM'
+                            },
+                            {
+                                office: 'null Park-2',
+                                name: 'GUP-677',
+                                number: '677-GUP'
+                            },
+                            {
+                                office: 'null GMB',
+                                name: 'STJ-681',
+                                number: '681-STJ'
+                            },
+                            {
+                                office: 'null RSM',
+                                name: 'LVJ-685',
+                                number: '685-LVJ'
+                            },
+                            {
+                                office: 'null RSM',
+                                name: 'RKL-698',
+                                number: '698-RKL'
+                            },
+                            {
+                                office: 'null Synergy',
+                                name: 'SYR-707',
+                                number: '707-SYR'
+                            },
+                            {
+                                office: 'null Synergy',
+                                name: 'NAS-711',
+                                number: '711-NAS'
+                            },
+                            {
+                                office: 'null RSM',
+                                name: 'NRU-714',
+                                number: '714-NRU'
+                            },
+                            {
+                                office: 'null Vario',
+                                name: 'AAJZ-716',
+                                number: '716-AAJZ'
+                            },
+                            {
+                                office: 'null Vario',
+                                name: 'AAJZ-718',
+                                number: '718-AAJZ'
+                            },
+                            {
+                                office: 'null BPION',
+                                name: 'RSA-724',
+                                number: '724-RSA'
+                            },
+                            {
+                                office: 'null Synergy',
+                                name: 'JGV-726',
+                                number: '726-JGV'
+                            },
+                            {
+                                office: 'null RSM',
+                                name: 'AALX-729',
+                                number: '729-AALX'
+                            },
+                            {
+                                office: 'null Vario',
+                                name: 'PXL-729',
+                                number: '729-PXL'
+                            },
+                            {
+                                office: 'null GMB',
+                                name: 'AEEN-735',
+                                number: '735-AEEN'
+                            },
+                            {
+                                office: 'null RSM',
+                                name: 'AALX-738',
+                                number: '738-AALX'
+                            },
+                            {
+                                office: 'null ABB',
+                                name: 'SVB-742',
+                                number: '742-SVB'
+                            },
+                            {
+                                office: 'null ABB',
+                                name: 'MOL-753',
+                                number: '753-MOL'
+                            },
+                            {
+                                office: 'null RSM',
+                                name: 'AIAK-756',
+                                number: '756-AIAK'
+                            },
+                            {
+                                office: 'null Parkfenntarto',
+                                name: 'NXG-759',
+                                number: '759-NXG'
+                            },
+                            {
+                                office: 'null RSM',
+                                name: 'RHE-762',
+                                number: '762-RHE'
+                            },
+                            {
+                                office: 'null Synergy',
+                                name: 'AAJM-769',
+                                number: '769-AAJM'
+                            },
+                            {
+                                office: 'null Synergy',
+                                name: 'RXU-773',
+                                number: '773-RXU'
+                            },
+                            {
+                                office: 'null OPTIM',
+                                name: 'AEDP-773',
+                                number: '773-AEDP'
+                            },
+                            {
+                                office: 'null Synergy',
+                                name: 'AEHK-774',
+                                number: '774-AEHK'
+                            },
+                            {
+                                office: 'null Synergy',
+                                name: 'AEHK-775',
+                                number: '775-AEHK'
+                            },
+                            {
+                                office: 'null Parkfenntarto',
+                                name: 'AEFE-775',
+                                number: '775-AEFE'
+                            },
+                            {
+                                office: 'null Park-2',
+                                name: 'AAGF-780',
+                                number: '780-AAGF'
+                            },
+                            {
+                                office: 'null Park-2',
+                                name: 'SAH-781',
+                                number: '781-SAH'
+                            },
+                            {
+                                office: 'null Park-2',
+                                name: 'SAH-786',
+                                number: '786-SAH'
+                            },
+                            {
+                                office: 'null Synergy',
+                                name: 'AEHK-790',
+                                number: '790-AEHK'
+                            },
+                            {
+                                office: 'null Parkfenntarto',
+                                name: 'NET-795',
+                                number: '795-NET'
+                            },
+                            {
+                                office: 'null Parkfenntarto',
+                                name: 'AAHG-796',
+                                number: '796-AAHG'
+                            },
+                            {
+                                office: 'null Synergy',
+                                name: 'AAEJ-800',
+                                number: '800-AAEJ'
+                            },
+                            {
+                                office: 'null Synergy',
+                                name: 'SUF-804',
+                                number: '804-SUF'
+                            },
+                            {
+                                office: 'null ABB',
+                                name: 'PAT-813',
+                                number: '813-PAT'
+                            },
+                            {
+                                office: 'null RSM',
+                                name: 'PRZ-831',
+                                number: '831-PRZ'
+                            },
+                            {
+                                office: 'null GMB',
+                                name: 'AAIR-831',
+                                number: '831-AAIR'
+                            },
+                            {
+                                office: 'null Synergy',
+                                name: 'SOM-835',
+                                number: '835-SOM'
+                            },
+                            {
+                                office: 'null Vario',
+                                name: 'RDE-835',
+                                number: '835-RDE'
+                            },
+                            {
+                                office: 'null BPION',
+                                name: 'NHH-846',
+                                number: '846-NHH'
+                            },
+                            {
+                                office: 'null BPION',
+                                name: 'NCN-851',
+                                number: '851-NCN'
+                            },
+                            {
+                                office: 'null BPION',
+                                name: 'NVW-860',
+                                number: '860-NVW'
+                            },
+                            {
+                                office: 'null RSM',
+                                name: 'KTW-871',
+                                number: '871-KTW'
+                            },
+                            {
+                                office: 'null BPION',
+                                name: 'NGJ-884',
+                                number: '884-NGJ'
+                            },
+                            {
+                                office: 'null Synergy',
+                                name: 'SUF-901',
+                                number: '901-SUF'
+                            },
+                            {
+                                office: 'null Synergy',
+                                name: 'SUF-902',
+                                number: '902-SUF'
+                            },
+                            {
+                                office: 'null Synergy',
+                                name: 'SUF-905',
+                                number: '905-SUF'
+                            },
+                            {
+                                office: 'null Synergy',
+                                name: 'SUF-906',
+                                number: '906-SUF'
+                            },
+                            {
+                                office: 'null Synergy',
+                                name: 'SUF-907',
+                                number: '907-SUF'
+                            },
+                            {
+                                office: 'null Vario',
+                                name: 'RYH-910',
+                                number: '910-RYH'
+                            },
+                            {
+                                office: 'null Synergy',
+                                name: 'AAJI-917',
+                                number: '917-AAJI'
+                            },
+                            {
+                                office: 'null RSM',
+                                name: 'RAL-918',
+                                number: '918-RAL'
+                            },
+                            {
+                                office: 'null Synergy',
+                                name: 'AEHK-926',
+                                number: '926-AEHK'
+                            },
+                            {
+                                office: 'null Synergy',
+                                name: 'AEHK-927',
+                                number: '927-AEHK'
+                            },
+                            {
+                                office: 'null Synergy',
+                                name: 'AEHK-928',
+                                number: '928-AEHK'
+                            },
+                            {
+                                office: 'null Synergy',
+                                name: 'AEHK-929',
+                                number: '929-AEHK'
+                            },
+                            {
+                                office: 'null Synergy',
+                                name: 'RMY-929',
+                                number: '929-RMY'
+                            },
+                            {
+                                office: 'null BPION',
+                                name: 'RMW-930',
+                                number: '930-RMW'
+                            },
+                            {
+                                office: 'null GMB',
+                                name: 'RTD-930',
+                                number: '930-RTD'
+                            },
+                            {
+                                office: 'null Synergy',
+                                name: 'AEHK-930',
+                                number: '930-AEHK'
+                            },
+                            {
+                                office: 'null Synergy',
+                                name: 'AEHK-931',
+                                number: '931-AEHK'
+                            },
+                            {
+                                office: 'null Synergy',
+                                name: 'AEHK-932',
+                                number: '932-AEHK'
+                            },
+                            {
+                                office: 'null RSM',
+                                name: 'AAHV-932',
+                                number: '932-AAHV'
+                            },
+                            {
+                                office: 'null Synergy',
+                                name: 'AEHK-934',
+                                number: '934-AEHK'
+                            },
+                            {
+                                office: 'null BPION',
+                                name: 'TBY-935',
+                                number: '935-TBY'
+                            },
+                            {
+                                office: 'null Parkfenntarto',
+                                name: 'AEFU-936',
+                                number: '936-AEFU'
+                            },
+                            {
+                                office: 'null RSM',
+                                name: 'RIL-958',
+                                number: '958-RIL'
+                            },
+                            {
+                                office: 'null Park-2',
+                                name: 'LIG-968',
+                                number: '968-LIG'
+                            },
+                            {
+                                office: 'null GMV',
+                                name: 'PDK-990',
+                                number: '990-PDK'
+                            },
+                            {
+                                office: 'null BPION',
+                                name: 'SUX-990',
+                                number: '990-SUX'
+                            },
+                            {
+                                office: 'CPI',
+                                name: 'SRR-684',
+                                number: '684-SRR'
+                            },
+                            {
+                                office: 'Berlet',
+                                name: 'JSH-210',
+                                number: '210-JSH'
+                            },
+                            {
+                                office: 'Berlet',
+                                name: 'STJ-681',
+                                number: '681-STJ'
+                            },
+                            {
+                                office: 'Berlet',
+                                name: 'KLA-235',
+                                number: '235-KLA'
+                            },
+                            {
+                                office: 'Berlet',
+                                name: 'IGA-744',
+                                number: '744-IGA'
+                            },
+                            {
+                                office: 'Berlet',
+                                name: 'AIEE-639',
+                                number: '639-AIEE'
+                            },
+                            {
+                                office: 'Berlet',
+                                name: 'AEFW-681',
+                                number: '681-AEFW'
+                            },
+                            {
+                                office: 'null Vario',
+                                name: 'RYJ-997',
+                                number: '997-RYJ'
+                            }
+                        ];
+                        $scope.orderByMe = function (x) {
+                            $scope.myOrderBy = x;
+                        }
+                    });
+                </script>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <section id="copyright">
+            <p>
+                &copy; <span id="copyright-year">2020</span>
+                <script>
+                    document.querySelector('#copyright-year').innerText = new Date().getFullYear();
+                </script>
+                Minden jog fenntartva
+            </p>
+        </section>
+    </footer>
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        })
+    </script>
+    <script src="../js/activePage.js"></script>
+</body>
+
+</html>
