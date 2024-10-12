@@ -1,0 +1,13 @@
+.template:before{background-image:url(../img/metalbrush.jpg)}
+.tpl p{
+  filter:drop-shadow(1px 2px 1px)drop-shadow(1px 2px 1px)
+}
+.tpl p:before{
+  color:#fff;
+  text-shadow:var(--3DshadowA2);
+  background:linear-gradient(90deg,rgba(255,255,255,0),rgba(255,255,255,.8),rgba(255,255,255,.8),rgba(255,255,255,0)) no-repeat bottom/100% .1em
+}
+.tpl p:after{
+  color:#666;
+  filter:url(#lightF4)
+}

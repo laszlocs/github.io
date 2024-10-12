@@ -1,0 +1,35 @@
+/* .tpl:before{background-image:url(../img/satin.jpg)} */
+/* 
+.tpl{
+ 
+  filter:drop-shadow(3px 3px 2px #000)
+}
+.tpl p:before{
+  color:#eee;
+  text-shadow:var(--outline-shadow9);
+  filter:url(#alfa-draw)url(#mono1)hue-rotate(60deg)
+}
+.tpl p:after{
+  color:#555;
+  filter:url(#lightE2)
+} */
+*{lighting-color:#fff;
+  lighting-color: #fa6
+}
+
+p {  
+  text-shadow: 0 0 .7px, 0 0 1.1px, 0 0 1.1px;  
+  filter: drop-shadow(3px 3px 2px #000)
+}
+
+p:before {
+  color: #eee;
+  text-shadow: 12px 1px 2px, 12px 2px 2px, 12px 3px 2px, 11px 4px 2px, 11px 5px 2px, 11px 6px 2px, 9px 7px 2px, 9px 8px 2px, 7px 9px 2px, 7px 9px 2px, 6px 10px 2px, 4px 11px 2px, 3px 11px 2px, 2px 11px 2px, 1px 12px 2px, -1px 12px 2px, -2px 11px 2px, -4px 11px 2px, -3px 11px 2px, -6px 10px 2px, -7px 9px 2px, -7px 9px 2px, -9px 8px 2px, -9px 7px 2px, -11px 6px 2px, -11px 5px 2px, -11px 4px 2px, -12px 3px 2px, -12px 2px 2px, -12px 1px 2px, -12px 0 2px, -12px -1px 2px, -12px -2px 2px, -12px -3px 2px, -11px -4px 2px, -11px -5px 2px, -11px -6px 2px, -9px -7px 2px, -9px -8px 2px, -7px -9px 2px, -7px -9px 2px, -6px -10px 2px, -4px -11px 2px, -3px -11px 2px, -2px -11px 2px, -1px -12px 2px, 1px -12px 2px, 2px -11px 2px, 3px -11px 2px, 4px -11px 2px, 7px -9px 2px, 7px -9px 2px, 6px -10px 2px, 9px -8px 2px, 9px -7px 2px, 11px -6px 2px, 11px -5px 2px, 11px -4px 2px, 12px -3px 2px, 12px -2px 2px, 12px -1px 2px, 12px 0 2px;
+  z-index: -1;
+  filter:url(#alfa-draw)
+}
+
+p:after {
+  color: #555;
+  filter:url(#lightE2)
+}

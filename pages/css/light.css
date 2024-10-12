@@ -1,0 +1,16 @@
+/* .tpl:before{background:url(../img/spring-leaves.jpg)0 0/cover} */
+.tpl{
+  font-weight:bold
+}
+.tpl p{
+  filter:url(#lightA5)
+}
+.tpl p:before,.tpl p:after{
+  color:#999;
+  text-shadow:0 0 .7px,0 0 1.1px,-1px 0 .4px #000,-2px -1px .4px #000,-2px -2px .4px #000,-1px -1px .4px #000,1px 0 .4px #000,1px 1px .4px #000,0 1px .4px #000
+}
+.tpl p:before{
+  filter:blur(.2px)
+}
+.tpl:after{content:"";width:1.14em;height:1.14em;background:url(../print/img/flareyellow.png);background-size:100%;top:-.32em;left:-.34em}
+*{lighting-color:yellow}

@@ -1,0 +1,73 @@
+body {
+  /* bottom */
+/* background: url(http://users.atw.hu/nyejani/print/textures/marble.jpg) */
+}
+*,:before,:after {  
+  /* bottom 
+  lighting-color: yellow */
+}
+  p{
+  position:absolute
+  ;position:relative
+  ;font-size:100px   
+  ;font-weight:600
+  ;text-transform: uppercas
+  ;line-height:1.5
+  ;letter-spacing:1px  
+  ;text-align:center  
+  ;font-family:rig bold face
+  ;-webkit-text-stroke: 0px rgba(255, 255, 255, 0.9)
+  ;width: -moz-fit-content
+  ;width: -webkit-fit-content
+  ;width: fit-content
+  ;margin: 2rem auto 0
+  ;padding: 0 .25em
+  ;color:yellow
+  /* bottom 
+  ;color: yellow;
+  ;text-shadow: 0 0 1px, 0 0 1.2px, -1px -1px 1px #300, 0 -1px 1px #300, 1px -1px 1px #300, 1px 0 1px #300, 1px 1px 1px #300, 0 1px 1px #300, -1px 1px 1px #300, -1px 0 1px #300, 0 0 1.6px;
+  ;filter: contrast(1.5) */
+
+  }
+
+  p::before,p::after{
+  
+  }  
+
+  p:before{  
+  font-family:rig bold inline
+  ;-webkit-text-stroke: 1px rgba(255, 255, 255, 0.9)
+  ;font-weight:00
+  ;color:#fff
+  ;filter:url(#outlin)url(#dilat)url(#black-outline1)url(#butto)url(#diffused)
+  /* bottom 
+  ;color: #000
+  ;text-shadow: var(--ShadowC1)
+  ;z-index: -1 */
+
+  }
+  p:after{
+  font-family: Rig Bold  coarse  
+  ;-webkit-text-stroke: 0px rgba(255, 255, 255, 0.9) 
+  ;font-weight: 00
+  ;color:orange
+  /* bottom 
+  ;color: rgba(110, 80, 60, .1)
+  ;text-shadow: 0 0 .7px, 0 0 1.1px, 0 0 1.1px, 1px -1px 1px rgba(110, 80, 60, .8), -1px 1px 1px rgba(255, 255, 255, .8)
+  ;filter: url(#light) */
+
+  }
+  
+
+  span:before{
+  color:
+  ;font-family:Rig Bold Coarse  
+  ;-webkit-text-stroke: 0px rgba(255, 255, 255, 0.9)    
+  }
+  
+  span:after{
+  color:gold
+  ;font-family:Rig Bold Extrude  
+  ;-webkit-text-stroke: 0px rgba(255, 255, 255, 0.9)   
+  }
+ 

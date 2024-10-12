@@ -1,0 +1,20 @@
+body {
+  /* background: url(http://users.atw.hu/nyejani/print/textures/marble.jpg); */
+ 
+}
+
+.tpl p {
+  text-shadow: 0 0 .7px, 0 0 1.1px, 0 0 1.1px;
+  filter:url(#in-and-out)
+}
+
+.tpl p:before { 
+  text-shadow: -1px -1px 1px, 0 -1px 1px, 1px -1px 1px, 1px 0 1px, 1px 1px 1px, 0 1px 1px, -1px 1px 1px, -1px 0 1px
+}
+
+.tpl p:after { 
+  filter:url(#lightA1)
+}
+#lightA1 * { 
+  lighting-color: #fff
+}

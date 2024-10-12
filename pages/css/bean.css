@@ -1,0 +1,12 @@
+body { 
+	/* background: #fec */
+	/* ;background: url(http://users.atw.hu/nyejani/print/textures/papirus.jpg)   */
+	}
+	*,:before,:after {  
+		lighting-color: white
+	}
+
+p:after{
+  color:#740;
+  filter:url(#lightA1)url(#bevel2)url(#edgeClean)
+}

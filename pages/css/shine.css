@@ -1,0 +1,10 @@
+.tpl{font-family:Arabia,bn,hi,hy,ja,ka,km,ko,ml,my,cursive}
+.tpl p:before{
+  color:#300;  
+  filter:drop-shadow(-1px -1px .4px currentColor)drop-shadow(-1px -1px currentColor)url(#lightA1)drop-shadow(-1px -1px currentColor)url(#lightA1)drop-shadow(-1px -1px currentColor)url(#lightA1)drop-shadow(-1px -1px currentColor)url(#lightA1)drop-shadow(-1px -1px currentColor)url(#lightA1)
+}
+.tpl p:after{
+  color:red;
+  filter:url(#lightA5)url(#lightA1)
+}
+#lightA1 *{lighting-color:#aaa}

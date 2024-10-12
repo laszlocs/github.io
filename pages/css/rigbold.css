@@ -1,0 +1,77 @@
+body { 
+	/* background: #fec */
+	/* ;background: url(http://users.atw.hu/nyejani/print/textures/papirus.jpg)   */
+	}
+	*,:before,:after {  
+		lighting-color: white
+	}
+
+	
+		p{
+		position:absolute
+		;color:#91d4ff
+		;font-family:rig bold face 
+		;font-size:120px   
+		;font-weight:600
+		;font-style:itali
+		;font-variant:small-cap
+		;text-transform: uppercase
+		;line-height:1.5
+		;letter-spacing:10px
+		;word-spacing:600px
+		;text-align:center				
+		;-webkit-text-stroke: 0px rgba(255, 255, 255, 0.9)
+		;background:
+		;width: -moz-fit-content
+		;width: -webkit-fit-content
+		;width: fit-content
+		;margin: 0rem auto 
+		;ox-shadow:var(--3DshadowA6)
+		;ext-shadow: 0 0 1px, 0 0 1.2px, -1px -1px 1px #300, 0 -1px 1px #300, 1px -1px 1px #300, 1px 0 1px #300, 1px 1px 1px #300, 0 1px 1px #300, -1px 1px 1px #300, -1px 0 1px #300, 0 0 1.6px
+		;ilter: contrast(1.5)
+		}
+
+
+		p:before{top:;left:
+		;color:#fff
+		;font-family:rig bold inline
+		;-webkit-text-stroke: 0px rgba(255, 255, 255, 0.9)
+		;font-weight:00
+		;ext-shadow:var(--3DShadowC1)
+		;ilter:
+		}
+
+
+		p:after{
+		color:#4d8bea
+		;font-family: Rig Bold  coarse  
+		;-ebkit-text-stroke: 0px rgba(255, 255, 255, 0.9) 
+		;font-weight:
+		;ext-shadow: 0 0 .7px, 0 0 1.1px, 0 0 1.1px
+		;ext-shadow: 0 0 .7px, 0 0 1.1px, 0 0 1.1px, 1px -1px 1px rgba(110, 80, 60, .8), -1px 1px 1px rgba(255, 255, 255, .8)
+		;ilter:url(#light)
+		}
+		
+
+
+		span:before{
+		color:#040351
+		;font-family:Rig Bold Coarse  
+		;-ebkit-text-stroke: 0px rgba(255, 255, 255, 0.9)    
+		;ext-shadow:
+		}
+		
+
+
+		span:after{
+		color:#91d4ff
+		;font-family:Rig Bold Extrude  
+		;-webkit-text-stroke: 0px rgba(255, 255, 255, 0.9)    
+		}
+		
+
+		
+		p::before,p::after{olor:#840
+			;ilter: url(#lightF0)
+			}
+			

@@ -1,0 +1,32 @@
+/* .tpl:before{
+  font-size:1vw;
+  color:#3888A1;
+  background: url(http://users.atw.hu/nyejani/print/textures/clear.jpg)  ;
+} */
+.tpl{
+  /* background: url(http://users.atw.hu/nyejani/print/textures/clear.jpg)  ; */
+}
+
+.tpl:before{
+  text-shadow:8px 8px 5px #000
+}
+.tpl:after{
+  color:#68a;
+  /* background: url(http://users.atw.hu/nyejani/print/textures/clear.jpg)  ; */
+  z-index:-1;
+  filter:url(#lightA3)drop-shadow(3px 4px 2px #000)
+}
+.tpl p{
+  filter:url(#diffused1)
+}
+.tpl p:before{
+  color:#fec;
+  text-shadow:var(--3DshadowC1);
+  filter:url(#dilate1)
+}
+.tpl p:after{
+  color:#ba8;
+  text-shadow:0 0 .7px,0 0 1.1px,0 0 1.1px,-1px -1px 1.1px #431,0 -1px 1.1px #431,1px -1px 1.1px #431,1px 0 1.1px #431,1px 1px 1.1px #431,0 1px 1.1px #431,-1px 1px 1.1px #431,-1px 0 1.1px #431;
+  filter:url(#lightA1)
+}
+#lightA3 *{lighting-color:aqua}

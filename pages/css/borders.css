@@ -1,0 +1,23 @@
+/* @import url(../css/pattern2.css); */
+/* #pattern{font-size:2em} */
+/* .tpl:after{background:-moz-element(#pattern);background:element(#pattern)} */
+/* #tpl{background:#fff;margin-top:40px} */
+#tpl:before{
+  /* border-radius:5px; */
+  /* box-shadow:0 0 0 .1em #655,0 0 0 .13em #333,0 0 0 .15em ghostwhite,0 0 0 .2em #655,0 0 0 .32em #333,inset 4px 4px 2px #999; */
+  filter:url(#lightA2)
+}
+.tpl{
+  /* background: url(http://users.atw.hu/nyejani/print/textures/marble2.jpg)  */
+}
+.tpl:before{
+  color:#ddd;
+  text-shadow:0 0 1px
+}
+.tpl p{
+  filter:url(#in-and-out)
+}
+.tpl p:after{
+  color:gray;
+  filter:url(#lightA1)
+}

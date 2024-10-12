@@ -1,0 +1,17 @@
+.tpl:before{background-color:#edc}
+.tpl{font-family:Corben,bn,hi,hy,ja,ka,km,ko,ml,my,cursive}
+.tpl p{
+  filter:url(#lightA7)url(#lightF0)url(#c1)url(#c1)url(#c1)url(#c1)
+}
+.tpl:before{opacity:.8;text-shadow:0 0 4px}
+.tpl p:before{opacity:.5}
+.tpl p:after{
+  top:-1px;
+  background-image:url(../img/copper.jpg);
+  text-shadow:none;
+  -webkit-text-fill-color:transparent;
+  text-fill-color:transparent;
+  -webkit-background-clip:text;
+  background-clip:text
+}
+*{lighting-color:#888}

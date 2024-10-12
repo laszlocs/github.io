@@ -1,0 +1,10 @@
+/* body{background-image:url(../img/sand.jpg);border-radius:20px;} */
+p{
+ 
+  filter:drop-shadow(3px 3px 3px currentColor)}
+p{filter:url(#in-and-out)}
+
+p:after{
+  filter:url(#lightE1)
+}
+#lightE1 *{lighting-color:#fff}

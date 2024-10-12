@@ -1,0 +1,14 @@
+/* .tpl:before{background-image:url(../img/goldmold.jpg)} */
+.tpl{font-family:arabia,bn,hi,hy,ja,ka,km,ko,ml,my,cursive}
+.tpl:before{top:-10px;left:-10px;text-shadow:var(--outline-shadow9);opacity:.8;
+  filter:url(#light)
+}
+.tpl p:before{
+  color:#110;
+  filter:url(#lightA7)url(#c1)url(#c1)url(#c1)url(#c1)url(#c1)url(#c1)url(#c1)url(#c1)url(#c1)brightness(1.7)contrast(1.3)blur(.4px)
+}
+.tpl p:after{
+  color:#430;
+  filter:url(#lightA7)
+}
+*{lighting-color:gold}

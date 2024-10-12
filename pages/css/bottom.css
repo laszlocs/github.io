@@ -1,0 +1,29 @@
+.template:before {
+  /* background-image: url(../img/marble3.jpg) */
+}
+
+.tpl {
+  font-family: mitr;
+  text-transform: uppercase;
+  letter-spacing: 12px
+}
+
+.tpl:before {
+  text-shadow: 0 0 1px,2px 0 1px #583008,0 2px 1px #e8c098,2px 1px 1px #583008,1px 2px 1px #e8c098,2px 2px 1px #487098,3px 1px 1px #583008,1px 3px 1px #e8c098,3px 2px 1px #583008,2px 3px 1px #e8c098,3px 3px 1px #487098,4px 2px 1px #583008,2px 4px 1px #e8c098,4px 3px 1px #583008,3px 4px 1px #e8c098,4px 4px 1px #487098,5px 3px 1px #583008,3px 5px 1px #e8c098,5px 4px 1px #583008,4px 5px 1px #e8c098,5px 5px 1px #487098,6px 4px 1px #583008,4px 6px 1px #e8c098,6px 5px 1px #583008,5px 6px 1px #e8c098,6px 6px 1px #487098,7px 5px 1px #583008,5px 7px 1px #e8c098,7px 6px 1px #583008,6px 7px 1px #e8c098,7px 7px 1px #487098,8px 6px 1px #583008,6px 8px 1px #e8c098,8px 7px 1px #583008,7px 8px 1px #e8c098,8px 8px 1px #487098,9px 7px 1px #583008,7px 9px 1px #e8c098,9px 8px 1px #583008,8px 9px 1px #e8c098,9px 9px 1px #487098,10px 8px 1px #583008,8px 10px 1px #e8c098,10px 9px 1px #583008,9px 10px 1px #e8c098,10px 10px 1px #487098,11px 9px 1px #583008,9px 11px 1px #e8c098,11px 10px 1px #583008,10px 11px 1px #e8c098,11px 11px 1px #487098,11px 11px 1px #666,11px 12px 1px #666,10px 12px 1px #666,9px 12px 1px #666,8px 11px 1px #666,7px 10px 1px #666,6px 9px 1px #666,5px 8px 1px #666,4px 7px 1px #666,3px 6px 1px #666,2px 5px 1px #666,1px 4px 1px #666,0 3px 1px #666,-1px 2px 1px #666,20px 8px 8px rgba(0,0,0,1);
+  filter: contrast(1.5)
+}
+
+.tpl p:before {
+  color: yellow;
+  text-shadow: 0 0 1px,0 0 1.2px,-1px -1px 1px #300,0 -1px 1px #300,1px -1px 1px #300,1px 0 1px #300,1px 1px 1px #300,0 1px 1px #300,-1px 1px 1px #300,-1px 0 1px #300,0 0 1.6px #000
+}
+
+.tpl p:after {
+  color: rgba(110,80,60,.3);
+  text-shadow: 0 0 1px,1px -1px 1px rgba(110,80,60,.8),-1px 1px 1px rgba(255,255,255,.8);
+  filter: url(#lightF9)
+}
+
+#lightF9 * {
+  lighting-color: yellow
+}

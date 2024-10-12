@@ -1,0 +1,47 @@
+*,
+:before,
+:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  lighting-color: #fff
+}
+:root {
+  --3DshadowB5: 0 0 1px #000, 0 0 1px #000, 0 0 1px #000, 1px -1px 1px, 0 -1px 1px, 1px 0 1px, 0 -1px 1px #000, 1px 0 1px #000, 2px -2px 1px, 1px -2px 1px, 2px -1px 1px, 1px -2px 1px #000, 2px -1px 1px #000, 3px -3px 1px, 2px -3px 1px, 3px -2px 1px, 2px -3px 1px #000, 3px -2px 1px #000, 4px -4px 1px, 3px -4px 1px, 4px -3px 1px, 3px -4px 1px #000, 4px -3px 1px #000, 5px -5px 1px, 4px -5px 1px, 5px -4px 1px, 4px -5px 1px #000, 5px -4px 1px #000, 6px -6px 1px, 5px -6px 1px, 6px -5px 1px, 5px -6px 1px #000, 6px -5px 1px #000, 7px -7px 1px, 6px -7px 1px, 7px -6px 1px, 6px -7px 1px #000, 7px -6px 1px #000, 8px -8px 1px, 7px -8px 1px, 8px -7px 1px, 7px -8px 1px #000, 8px -7px 1px #000, 9px -9px 1px, 8px -9px 1px, 9px -8px 1px, 8px -9px 1px #000, 9px -8px 1px #000, 10px -10px 1px, 9px -10px 1px, 10px -9px 1px, 9px -10px 1px #000, 10px -9px 1px #000, 10px -10px 1px #000;
+}
+
+body {
+  /* background-image: url(http://users.atw.hu/nyejani/print/textures/papirus.jpg) */
+}
+
+p {
+  /* position: relative;
+  font-family: 'Fascinate Inline';
+  font-size: 8rem;
+  letter-spacing: 5px; */
+  text-align: center;
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  width: fit-content;
+  margin: 2rem auto 0
+}
+
+p:before,
+p:after {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  content: attr(data-text);
+  color: #840;
+  filter: url(#lightF0)
+}
+
+p:before {
+  text-shadow: var(--3DshadowB5)
+}
+
+p:after {
+  text-shadow: 0 0 .7px, 0 0 1.1px, 0 0 1.1px
+} 

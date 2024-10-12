@@ -1,0 +1,15 @@
+/* body{background-image:url(../img/goldmold.jpg)} */
+.tpl{
+  font-weight:bold
+}
+.tpl p:before{
+  color:#fff;
+  text-shadow:var(--3DshadowC5);
+  filter:drop-shadow(1px 1px 1px rgba(0,0,0,.3))
+}
+.tpl p:after{
+  color:gold;
+  text-shadow:0 0 .7px,0 0 1.1px,0 0 1.1px,-1px -1px 1px #a80,0 -1px 1px #a80,1px -1px 1px #a80,1px 0 1px #a80,1px 1px 1px #a80,0 1px 1px #a80,-1px 1px 1px #a80,0 -1px 1px #a80,2px 0 1px #a80,0 2px 1px #a80,2px 2px 1px #a80,3px 1px 1px #a80,1px 3px 1px #a80,3px 3px 1px #a80,4px 2px 1px #a80,2px 4px 1px #a80,4px 4px 1px #a80;
+  filter:url(#lightC5)
+}
+*{lighting-color:yellow}

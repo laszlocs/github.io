@@ -1,0 +1,52 @@
+:root {
+  --3DshadowA4: 0 0 1px rgba(0, 0, 0, .7), 0 -1px 1px rgba(0, 0, 0, .5), 0 -1px 1px, -1px 0 1px, -2px -1px 1px, -1px 0 1px rgba(0, 0, 0, .5), -1px -2px 1px rgba(0, 0, 0, .5), -1px -2px 1px, -2px -1px 1px, -3px -2px 1px, -2px -1px 1px rgba(0, 0, 0, .5), -2px -3px 1px rgba(0, 0, 0, .5), -2px -3px 1px, -3px -2px 1px, -4px -3px 1px, -3px -2px 1px rgba(0, 0, 0, .5), -3px -4px 1px rgba(0, 0, 0, .5), -3px -4px 1px, -4px -3px 1px, -5px -4px 1px, -4px -3px 1px rgba(0, 0, 0, .5), -4px -5px 1px rgba(0, 0, 0, .5), -4px -5px 1px, -5px -4px 1px, -6px -5px 1px, -5px -4px 1px rgba(0, 0, 0, .5), -5px -6px 1px rgba(0, 0, 0, .5), -5px -6px 1px, -6px -5px 1px, -7px -6px 1px, -6px -5px 1px rgba(0, 0, 0, .5), -6px -7px 1px rgba(0, 0, 0, .5), -6px -7px 1px, -7px -6px 1px, -8px -7px 1px, -7px -6px 1px rgba(0, 0, 0, .5), -7px -8px 1px rgba(0, 0, 0, .5), -7px -8px 1px, -8px -7px 1px, -9px -8px 1px, -8px -7px 1px rgba(0, 0, 0, .5), -8px -9px 1px rgba(0, 0, 0, .5), -8px -9px 1px, -9px -8px 1px, -10px -9px 1px, -9px -8px 1px rgba(0, 0, 0, .5), -9px -10px 1px rgba(0, 0, 0, .5), -9px -10px 1px, -10px -9px 1px, -10px -10px 1px, -10px -9px 1px rgba(0, 0, 0, .5), -10px -10px 1px rgba(0, 0, 0, .7);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  lighting-color: #ccc
+}
+
+body {
+  /* background: url(http://users.atw.hu/nokiss/print/textures/marble2.jpg); */
+  padding: 1em
+}
+
+svg {
+  position: absolute;
+  top: -999em
+}
+
+filter {
+  color-interpolation-filters: sRGB
+}
+
+p {
+  position: relative;
+  font-weight: bold;
+  font-size: 8rem;
+  text-align: center;
+  filter: url(#color-emboss1)
+}
+
+p:before,
+p:after {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  content: attr(data-text);
+  filter: url(#lightF5)
+}
+
+p:before {
+  color: #730;
+  text-shadow: var(--3DshadowA4)
+}
+
+p:after {
+  color: #951;
+  text-shadow: 0 0 .7px, 0 0 1.1px, 0 0 1.1px
+}
